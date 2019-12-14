@@ -1,0 +1,123 @@
+<html>
+	<head>
+		<style>
+			h2 {
+				font-weight: bold;
+				font-size: 100;
+				font-family: Tahoma;
+			}
+			.hiddenbutton {
+				font-weight: bold;
+				font-size: 15;
+				font-family: Times New Roman;
+				float:center;
+                visibility: hidden
+			}
+            img {
+                float:center;
+            }
+            text {
+				font-weight: bold;
+				font-size: 25;
+				font-family: Times New Roman;
+				float:center;
+				background-color:white;
+				box-shadow: 0px 0px 100px white;
+            }
+			text-big {
+				font-weight: bold;
+				font-size: 50;
+				font-family: Times New Roman;
+				float:center;
+				background-color:white;
+				box-shadow: 0px 0px 100px white;
+            }
+            .button-cool {
+                width: 200px; 
+                margin: 20px;
+                height: 40px;
+                box-shadow: 0px 0px 100px white;
+                border-radius: 20px;
+            }
+            select {
+                width: 420px; 
+                margin: 20px;
+                height: 40px;
+                box-shadow: 0px 0px 100px white;
+                border-radius: 20px;
+            }
+            button.drop {
+                box-shadow: 10px 10px 2px black;
+                border-radius: 20px;
+            }
+			body {
+				background-size: cover
+			}
+			
+            .dropbtn {
+                width: 200px; 
+                margin: 20px;
+                height: 40px;
+                box-shadow: 0px 0px 100px white;
+                border-radius: 20px;
+            }
+			.dropdown {
+			  position: relative;
+			  display: inline-block;
+			}
+			.dropdown-content {
+			  display: none;
+			  position: absolute;
+			  border-radius: 20px;
+                width: 420px; 
+                margin: 0px;
+                height: 0px;
+			  min-width: 160px;
+			  z-index: 1;
+			}
+			.show {display:block;}
+
+		</style>
+		<meta charset="UTF-8">
+  	<meta name="og:title" content="AAAAAA">
+  	<meta name="og:description" content="AAAAAAAAAAAAAAAAAA">
+	</head>
+	<title>Map Game!</title>
+	<body id="background" background="images\plains.jpeg" opacity="0.5">
+		<audio id="music" src="music1.mp3" autoplay loop>
+		  Your browser does not support the <code>audio</code> element.
+		</audio>
+        <text-big id="location">Map Game</text-big>
+		<br/>
+		<text id="att">Press any key to start.</text>
+		<br/><br/>
+		<button hidden class="button-cool" id="fbutton" onclick="forage()">Forage (F)</button>
+			<div class="dropdown">
+			<button hidden class="dropbtn" id="xbutton" onclick="attackmenu()">Use Items (Space)</button>
+			</div>
+			<div class="dropdown">
+			  <button hidden id="craftmenu" onclick="craftmenu()" class="dropbtn">Craft (C)</button>
+			  <div id="craftdr" class="dropdown-content">
+				<button onclick="craft(1)" id="craft1">Spear</button>
+				<button onclick="craft(2)" id="craft2">Hat</button>
+				<button onclick="craft(4)" id="craft4">String</button>
+				<button onclick="craft(3)" id="craft3">Rope</button>
+				<button onclick="craft(5)" id="craft5">Fishing Rod</button>
+				<button onclick="craft(6)" id="craft6">Bow</button>
+				<button onclick="craft(7)" id="craft7">Arrow</button>
+				<button onclick="craft(8)" id="craft8">Lantern</button>
+				<button onclick="craft(9)" id="craft9">Grass</button>
+				<button onclick="craft(10)" id="craft10">Seashell Lace</button>
+			  </div>
+			</div>
+		<br/><br/>
+		<text hidden id="stat-health">Health: 3</text><br/>
+		<text hidden id="stat-gold">Gold: 0</text>
+		<br/>
+		<text id="invtext" hidden>Inventory:</text><text id="inv"></text><br/>
+		<text hidden id="equipped">Equipped: </text><text id="equ"></text><br/>
+		<button hidden class="button-cool" id="sbutton" onclick="saveGame()">Save (H)</button>
+		<button hidden class="button-cool" id="dbutton" onclick="resetgame()">Delete Save</button>
+		<script type="text/javascript" src="main.js"></script>
+	</body>
+</html>
